@@ -7,7 +7,10 @@
     <title>Codial</title>
 </head>
 <body>
-    <h1>Welcome to homepage </h1>
+    <h1>Welcome to Social Media Website </h1>
+    <%if(!locals.user){%>
+        <h3>Please login to post something😀</h3>
+        <%}%>
     <%if(locals.user){%>
         <a href="/users/sign-out">Sign-out</a>
         <%} else {%>
@@ -25,7 +28,11 @@
     </section>
     <%}%>
     <section id="post-display">
+        <%if(post.length===0){%>
+            <h3>There are not any posts on our page yet!!😢😢</h3>
+            <%else{%>
         <h3>All Posts-:</h3>
+        <%}%>
         <ul>
         <%-include('_post')-%>
         </ul>
