@@ -84,6 +84,6 @@ module.exports.updateDetails=function(req,res){
    
 }
 //google home
-module.exports.googleHome=async (req,res)=>{
+module.exports.googleHome= (req,res)=>{
     return res.redirect('/');
 }
