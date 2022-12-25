@@ -39,7 +39,7 @@
             <h2>All Registered Users-:</h2>
             <h4>Click on users name to view profile-:</h4>
         <%for(user of all_user){%>
-            <%if(locals.user.name==user.name){%>
+            <%if(locals.user.name===user.name){%>
                 <p><a href="/users/profile/<%=user._id%>">You</a></p>
                 <%} else {%>
                 <p><a href="/users/profile/<%=user._id%>"><%=user.name%></a></p>
