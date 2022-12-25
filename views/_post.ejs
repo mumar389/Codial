@@ -17,7 +17,11 @@
     <%}%>
 
     <div class="comment-display">
+        <%if(i.comments.length===0){%>
+            <p>No Comments yet</p>
+            <%else{%>
         <p>All Comments-:</p>
+        <%}%>
         <ul>
             <%for( com of i.comments){%>
                 <ul>
