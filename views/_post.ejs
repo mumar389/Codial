@@ -1,7 +1,6 @@
 <% for(let i of post){%>
     <li><%=i.user.name%></li>
     <li><%=i.user.email%></li>
-    <li><%=i.user.password%></li>
     <%if(locals.user && locals.user.id==i.user.id){%>
     <small>
         <a href="/post/destroy/<%=i._id%>">Delete Post</a>
