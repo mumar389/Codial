@@ -16,5 +16,11 @@ router.post('/create-session',passport.authenticate(
 ),userControl.createSession);
 router.get('/sign-out',userControl.signout);
 router.post('/update/:id',userControl.updateDetails);
+//google login-:
+router.get('/auth/google',
+passport.authenticate('google', { scope: ['profile','email'] }));
+
+router.get('/auth/google/google-home',passport.authenticate('google',{
+    failureRedirect:'/users/sign-up'}),userControl.googleHome);
 //Exporting the router
 module.exports=router;

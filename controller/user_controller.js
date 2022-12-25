@@ -19,7 +19,7 @@ module.exports.createSession=function(req,res){
 }
 module.exports.create=function(req,res){
     try {
-        if(req.body.password!=req.body.confirm_password){
+        if(req.body.password!=req.body.confirm_password || !req.body.password|| !req.body.confirm_password){
             console.log("Passwords should be same");
             return;
         }
@@ -82,4 +82,8 @@ module.exports.updateDetails=function(req,res){
         return res.redirect('back')
     }
    
+}
+//google home
+module.exports.googleHome=async (req,res)=>{
+    return res.redirect('/');
 }

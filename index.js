@@ -6,6 +6,7 @@ const session=require('express-session');
 const cookieParser=require('cookie-parser');
 const passport=require('passport');
 const passportLocal=require('./config/passport_local_strategy');
+const GoogleStrategy=require('./config/passport-google-oauth20');
 const MongoStore=require('connect-mongo');
 //Database Connection
 const db=require('./config/mongoose');
