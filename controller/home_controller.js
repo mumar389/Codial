@@ -2,6 +2,8 @@ const Post=require('../model/post');
 const User=require('../model/user');
 module.exports.home=function(req,res){
     try {
+        if(process.env.PORT!=null)
+            console.log(process.env.PORT);
         Post.find({})
         .populate('user')
         .populate({
