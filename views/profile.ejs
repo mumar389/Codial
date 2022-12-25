@@ -18,7 +18,9 @@
         <section id="update-form">
             <form action="/users/update/<%=all_user._id%>" method="post">
                 <input type="text" name="name" value="<%=all_user.name%>">
+                <%if(all_user.googleId==null){%>
                 <input type="text" name="email" value="<%=all_user.email%>">
+                <%}%>
                 <button type="submit">Update</button>
             </form>
         </section>
