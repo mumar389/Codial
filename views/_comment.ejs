@@ -1,5 +1,5 @@
-<li><%=com.content%></li>
-<li><p><%=com.user.name%></p>
+<li>Content-:<%=com.content%></li>
+<li>User-:<p><%=com.user.name%></p>
     <%if(locals.user && locals.user.id==com.user.id){%>
     <small>
         <a href="/comments/destroy/<%=com._id%>">Delete Comment</a>

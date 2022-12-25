@@ -1,11 +1,11 @@
 <% for(let i of post){%>
-    <li><%=i.user.name%></li>
+    <li>Content-:<%=i.content%></li>
+    <li>User-:<%=i.user.name%></li>
     <%if(locals.user && locals.user.id==i.user.id){%>
     <small>
         <a href="/post/destroy/<%=i._id%>">Delete Post</a>
     </small>
     <%}%>
-    <li><%=i.content%></li>
     <%if(locals.user){%>
     <div class="comment">
         <form action="/comments/create" method="post">
@@ -17,10 +17,10 @@
     <%}%>
 
     <div class="comment-display">
+        <p>All Comments-:</p>
         <ul>
             <%for( com of i.comments){%>
                 <ul>
-               
                     <%-include('_comment')-%>
             </ul>
                 <%}%>
