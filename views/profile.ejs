@@ -13,8 +13,8 @@
     <h2>Your email is:<%=all_user.email%></h2>
     <br>
     <br>
-    <p>Want to Update Your Profile?</p>
     <%if(locals.user.id==all_user.id){%>
+        <p>Want to Update Your Profile?</p>
         <section id="update-form">
             <form action="/users/update/<%=all_user._id%>" method="post">
                 <input type="text" name="name" value="<%=all_user.name%>">
