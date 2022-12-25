@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+  
+    <h1>Welcome to profile</h1>
+    <h2>Your name is:<%=locals.user.name%></h2>
+    <h2>Your email is:<%=locals.user.email%></h2>
+    <br>
+    <br>
+    <p>Want to Update Your Profile?</p>
     <%if(locals.user.id==all_user.id){%>
         <section id="update-form">
             <form action="/users/update/<%=all_user._id%>" method="post">
@@ -16,9 +23,9 @@
             </form>
         </section>
         <%}%>
-    <h1>welcome to profile</h1>
-    <h2>Your name is:<%=user.name%></h2>
-    <h2>Your email is:<%=user.email%></h2>
+        <br>
+        <br>
+        <hr>
     <a href="/users/sign-out">Sign out</a>
     <a href="/">Home</a>
 </body>
