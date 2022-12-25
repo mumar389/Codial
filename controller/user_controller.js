@@ -39,7 +39,7 @@ module.exports.create=function(req,res){
             }
             else{
                 console.log("User with this details already exists");
-                return res.redirect('/users/sign-in');
+                return res.redirect('/users/sign-up');
             }
         })
     } catch (error) {
