@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%if(locals.user.id==all_user.id){%>
+        <section id="update-form">
+            <form action="/users/update/<%=all_user._id%>" method="post">
+                <input type="text" name="name" value="<%=all_user.name%>">
+                <input type="text" name="email" value="<%=all_user.email%>">
+                <button type="submit">Update</button>
+            </form>
+        </section>
+        <%}%>
+    <h1>welcome to profile</h1>
+    <h2>Your name is:<%=user.name%></h2>
+    <h2>Your email is:<%=user.email%></h2>
+    <a href="/users/sign-out">Sign out</a>
+    <a href="/">Home</a>
+</body>
+</html>
