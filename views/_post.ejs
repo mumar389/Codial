@@ -6,6 +6,7 @@
     </small>
     <%}%>
     <li><%=i.content%></li>
+    <%if(locals.user){%>
     <div class="comment">
         <form action="/comments/create" method="post">
             Comment-:<input type="text" name="content">
@@ -23,4 +24,5 @@
                 <%}%>
         </ul>
     </div>
+    <%}%>
     <%}%>
