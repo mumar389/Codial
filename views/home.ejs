@@ -38,12 +38,9 @@
         <%if(locals.user){%>
             <h2>All Registered Users-:</h2>
             <h4>Click on users name to view profile-:</h4>
-        <%for(user of all_user){%>
-            <%if(locals.user._id===user._id){%>
-                <p><a href="/users/profile/<%=user._id%>">You</a></p>
-                <%} else {%>
+        <%for(user of all_user){%
                 <p><a href="/users/profile/<%=user._id%>"><%=user.name%></a></p>
-            <%}%>
+
             <%}%>
         <%}%>
     </section>
