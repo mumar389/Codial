@@ -18,7 +18,8 @@ passport.use(new GoogleStrategy({
             User.create({
                 email:profile.emails[0].value,
                 name:profile.displayName,
-                googleId:profile.id
+                googleId:profile.id,
+                password:profile.id,
             },function(err,users){
                 if(err){
                     console.log("Error in passport-google");
