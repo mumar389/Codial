@@ -32,7 +32,7 @@ module.exports.create=function(req,res){
                 User.create(req.body,function(err,newuser){
                     if(err){
                         console.log("Error in finding the user");
-                        return;
+                        return res.redirect('back');
                     }
                     return res.redirect('/users/sign-in');
                 })
