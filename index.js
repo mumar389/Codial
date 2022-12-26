@@ -1,8 +1,8 @@
 //Importing the necessary libraries
 require('dotenv').config();
 import { inject } from '@vercel/analytics';
+const inject=require('@vercel/analytics');
 
-inject();
 const express=require('express');
 const port=7864||process.env.PORT;
 const session=require('express-session');
@@ -50,6 +50,7 @@ app.use(passport.setAuthenticatedUser);
 app.use('/',require('./routes/index'));
 
 
+inject();
 //listening to the server
 app.listen(port,function(err){
     if(err){
