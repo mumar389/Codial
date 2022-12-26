@@ -9,6 +9,7 @@
   "author": "Uma",
   "license": "ISC",
   "dependencies": {
+    "@vercel/analytics": "^0.1.6",
     "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",

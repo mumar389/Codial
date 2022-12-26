@@ -1,5 +1,8 @@
 //Importing the necessary libraries
 require('dotenv').config();
+import { inject } from '@vercel/analytics';
+
+inject();
 const express=require('express');
 const port=7864||process.env.PORT;
 const session=require('express-session');
