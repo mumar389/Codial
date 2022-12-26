@@ -1,6 +1,5 @@
 //Importing the necessary libraries
 require('dotenv').config();
-import { inject } from '@vercel/analytics';
 const inject=require('@vercel/analytics');
 
 const express=require('express');
