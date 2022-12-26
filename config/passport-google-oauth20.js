@@ -6,7 +6,7 @@ const User=require('../model/user');
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret:process.env.CLIENT_SECRET,
-    callbackURL: "https://social-mu-dun.vercel.app/users/auth/google/google-home"
+    callbackURL: "https://codial.vercel.app/users/auth/google/google-home"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOne({ email: profile.emails[0].value }, function (err, user) {
